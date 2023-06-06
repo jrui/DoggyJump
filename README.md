@@ -11,3 +11,4 @@ From: https://www.youtube.com/watch?v=GFO_txvwK_c
 - [x] Multiple Distinct Enemies: https://captainjroy.github.io/DoggyJump/multiple_distinct_enemies/
 - [x] Mobile Sidescroller: https://captainjroy.github.io/DoggyJump/mobile_sidescroller/
 - [x] Game State: https://captainjroy.github.io/DoggyJump/game_state/
+- [ ] Doggy Jump: https://captainjroy.github.io/DoggyJump/
