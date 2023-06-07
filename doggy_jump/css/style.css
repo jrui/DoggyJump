@@ -22,6 +22,7 @@
 #backgroundImage5,
 #enemyFlyImage,
 #enemyPlantImage,
-#enemySpiderImage {
+#enemySpiderImage,
+#fireImage {
     display: none;
 }

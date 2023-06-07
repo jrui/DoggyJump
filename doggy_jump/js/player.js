@@ -3,6 +3,7 @@ import {
     Running,
     Jumping,
     Falling,
+    Rolling,
 } from './playerStates.js';
 
 export class Player {
@@ -27,16 +28,16 @@ export class Player {
         this.weight = 1;
 
         this.states = [
-            new Sitting(this),
-            new Running(this),
-            new Jumping(this),
-            new Falling(this),
+            new Sitting(this.game),
+            new Running(this.game),
+            new Jumping(this.game),
+            new Falling(this.game),
+            new Rolling(this.game),
         ];
-        this.currentState = this.states[0];
-        this.currentState.enter();
     }
 
     update(input, deltaTime) {
+        this.checkCollision();
         this.currentState.handleInput(input);
 
         // horizontal movement
@@ -72,6 +73,23 @@ export class Player {
 
     onGround() {
         return this.y >= this.game.height - this.height - this.game.groundMargin;
+    }
+
+    checkCollision() {
+        this.game.enemies.forEach(enemy => {
+            if(
+                enemy.x < this.x + this.width &&
+                enemy.x + enemy.width > this.x &&
+                enemy.y < this.y + this.height &&
+                enemy.y + enemy.height > this.y
+            ) {
+                // collision detected
+                enemy.markedForDeletion = true;
+                this.game.score++;
+            } else {
+                // no colision
+            }
+        });
     }
 
     draw(context) {
