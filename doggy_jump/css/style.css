@@ -15,14 +15,21 @@
 }
 
 #playerImage,
-#backgroundImage1,
-#backgroundImage2,
-#backgroundImage3,
-#backgroundImage4,
-#backgroundImage5,
+#cityBackgroundImage1,
+#cityBackgroundImage2,
+#cityBackgroundImage3,
+#cityBackgroundImage4,
+#cityBackgroundImage5,
+#forestBackgroundImage1,
+#forestBackgroundImage2,
+#forestBackgroundImage3,
+#forestBackgroundImage4,
+#forestBackgroundImage5,
 #enemyFlyImage,
 #enemyPlantImage,
 #enemySpiderImage,
-#fireImage {
+#fireImage,
+#collisionAnimationImage,
+#heartImage {
     display: none;
 }
